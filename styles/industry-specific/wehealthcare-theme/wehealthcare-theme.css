@@ -1,0 +1,73 @@
+.wehealthcare-theme {
+  --main-accent-color: #00c4ff;
+  --nav-text-color: #000000;
+  --light-color: #f6f6f6;
+}
+
+/* Sticky footer layout */
+body.wehealthcare-theme {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.wehealthcare-theme main {
+  flex: 1;
+}
+
+body.wehealthcare-theme footer {
+  margin-top: auto;
+}
+
+/* Header nav */
+.wehealthcare-theme header nav[aria-expanded='true'] {
+  min-height: 0;
+  overflow: visible;
+  padding: 0;
+  height: auto;
+}
+
+.wehealthcare-theme .section.nav-sections {
+  padding: 22px 32px;
+}
+
+.wehealthcare-theme header .nav-brand {
+  flex-basis: unset;
+}
+
+.wehealthcare-theme header nav .nav-brand img {
+  width: auto;
+  height: 36.5px;
+}
+
+.wehealthcare-theme header nav .nav-brand picture {
+  width: 133.5px;
+}
+
+body.wehealthcare-theme header .nav-wrapper {
+  background-color: #fff;
+}
+
+body.wehealthcare-theme header nav .nav-sections ul > li > a {
+  color: #000;
+}
+
+body.wehealthcare-theme .lang-switcher .lang-button {
+  color: #000;
+  border: 1px solid rgb(0 0 0 / 40%);
+}
+
+body.wehealthcare-theme a.sign-in-btn {
+  text-align: center;
+  color: #000;
+  border: 1px solid rgb(0 0 0 / 40%);
+  align-items: center;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+@media (width < 900px) {
+  body.wehealthcare-theme header nav .nav-sections ul > li > a {
+    color: #000;
+  }
+}
