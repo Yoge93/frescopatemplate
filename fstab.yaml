@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p189874-e1977911.adobeaemcloud.com/bin/franklin.delivery/svfranklindemo/migration-parent-repo/main"
+    url: "https://author-p35435-e1920336.adobeaemcloud.com/bin/franklin.delivery/yoge93/frescopatemplate/main"
     type: "markup"
     suffix: ".html"
