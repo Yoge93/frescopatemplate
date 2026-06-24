@@ -47,8 +47,20 @@
               "value": "default"
             },
             {
-              "name": "Compact",
+              "name": "Grid",
+              "value": "grid"
+            },
+            {
+              "name": "List",
+              "value": "list"
+            },
+            {
+              "name": "Card (Compact)",
               "value": "compact"
+            },
+            {
+              "name": "Masonry",
+              "value": "masonry"
             },
             {
               "name": "Expanded",
@@ -61,12 +73,8 @@
           "name": "dataSourceType",
           "label": "Data Source Type",
           "valueType": "string",
-          "value": "dam-json",
+          "value": "content-fragments",
           "options": [
-            {
-              "name": "JSON File from DAM",
-              "value": "dam-json"
-            },
             {
               "name": "Content Fragments",
               "value": "content-fragments"
@@ -74,10 +82,6 @@
             {
               "name": "External API",
               "value": "api"
-            },
-            {
-              "name": "Static JSON",
-              "value": "json"
             }
           ]
         },
@@ -124,9 +128,41 @@
         {
           "component": "boolean",
           "name": "enableSpecialtyFilter",
-          "label": "Enable Specialty Filter",
+          "label": "Enable Specialty / Tags Filter",
           "value": "true",
           "valueType": "boolean"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "specialtyLabel",
+          "label": "Specialty Field Label",
+          "value": "Specialty",
+          "description": "Label shown above the specialty/tags dropdown",
+          "condition": {
+            "==": [
+              {
+                "var": "enableSpecialtyFilter"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "specialtyPlaceholder",
+          "label": "Specialty Dropdown Placeholder",
+          "value": "All Specialties",
+          "description": "Default placeholder option in the specialty dropdown",
+          "condition": {
+            "==": [
+              {
+                "var": "enableSpecialtyFilter"
+              },
+              true
+            ]
+          }
         },
         {
           "component": "boolean",
@@ -134,6 +170,38 @@
           "label": "Enable Provider Name Search",
           "value": "true",
           "valueType": "boolean"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "providerNameLabel",
+          "label": "Provider Name Field Label",
+          "value": "Search by Provider Name",
+          "description": "Label shown above the provider name search input",
+          "condition": {
+            "==": [
+              {
+                "var": "enableProviderNameSearch"
+              },
+              true
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "providerNamePlaceholder",
+          "label": "Provider Name Input Placeholder",
+          "value": "Enter doctor's name...",
+          "description": "Placeholder text inside the provider name input",
+          "condition": {
+            "==": [
+              {
+                "var": "enableProviderNameSearch"
+              },
+              true
+            ]
+          }
         },
         {
           "component": "boolean",
