@@ -1,20 +1,12 @@
 body.frescopa-theme {
-  /* --main-accent-color: #27647d;
+  --main-accent-color: #27647d;
   --main-accent-hover: #1f5368;
   --link-hover-color: #27647d;
   --nav-text-color: #58181d;
   --footer-text-color: #58181d;
   --light-color: #f0e0d2;
   --background-color: #ffffff;
-  --text-color: #58181d; */
-  --main-accent-color: #aead43;
-  --main-accent-hover: #aead43;
-  --link-hover-color: #aead43;
-  --nav-text-color: #aead43;
-  --footer-text-color: #aead43;
-  --light-color: #aead43;
-  --background-color: #aead43;
-  --text-color: #aead43;
+  --text-color: #58181d;
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: baskerville-display-pt, Baskerville, "Times New Roman", serif;
   --heading-font-size-xxl: 3.5rem;
