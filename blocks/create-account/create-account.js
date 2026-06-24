@@ -378,7 +378,8 @@ function attachCreateAccountSubmitHandler(block, config) {
           })
         );
 
-        sessionStorage.setItem(
+        // sessionStorage.setItem(
+        localStorage.setItem(
           "com.adobe.reactor.dataElements.Identity Map",
           JSON.stringify({
             Email: [
