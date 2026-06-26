@@ -67,10 +67,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "name-change-request",
-      "components": []
-    }
-  ]
+  "filters": []
 }

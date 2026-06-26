@@ -130,12 +130,7 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "category-products-lister",
-      "components": []
-    }
-  ]
+  "filters": []
 }
 
 

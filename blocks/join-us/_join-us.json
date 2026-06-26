@@ -97,10 +97,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "join-us",
-      "components": []
-    }
-  ]
+  "filters": []
 }

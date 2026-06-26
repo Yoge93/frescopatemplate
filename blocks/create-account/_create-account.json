@@ -122,10 +122,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "create-account",
-      "components": []
-    }
-  ]
+  "filters": []
 }
