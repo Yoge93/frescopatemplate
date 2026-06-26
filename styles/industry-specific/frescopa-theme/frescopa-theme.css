@@ -5,7 +5,7 @@ body.frescopa-theme {
   --nav-text-color: #58181d;
   --footer-text-color: #58181d;
   --light-color: #f0e0d2;
-  --background-color: #ffffff;
+  --background-color: #fff;
   --text-color: #58181d;
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: baskerville-display-pt, Baskerville, "Times New Roman", serif;
@@ -97,7 +97,7 @@ body.frescopa-theme .cta-button a.button,
 body.frescopa-theme .cta-button-dark a.button {
   background: #27647d;
   border-color: #27647d;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 body.frescopa-theme .button-container.cta-button a.button:hover,
@@ -110,7 +110,7 @@ body.frescopa-theme .cta-button-dark a.button:hover {
 body.frescopa-theme .cta-button-secondary a.button,
 body.frescopa-theme a.button.secondary,
 body.frescopa-theme button.secondary {
-  background: #ffffff;
+  background: #fff;
   border: 2px solid #58181d;
   color: #58181d !important;
 }
@@ -121,7 +121,7 @@ body.frescopa-theme main .cart .cart-qty-input {
     padding-left: 22px;
 }
 body.frescopa-theme header .nav-wrapper {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #58181d;
   box-shadow: 0 1px 8px rgb(88 24 29 / 8%);
 }
@@ -154,8 +154,8 @@ body.frescopa-theme header nav .nav-brand img {
 }
 
 body.frescopa-theme .TopRibbon {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 
 body.frescopa-theme .TopRibbon__content {
@@ -206,7 +206,7 @@ body.frescopa-theme a.sign-in-btn,
 body.frescopa-theme header nav .nav-tools a[href*="sign"] {
   color: #58181d;
   border: 2px solid #4f4b47;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999px !important;
 }
 
@@ -254,7 +254,7 @@ body.frescopa-theme header nav .nav-tools .cart-icon .cart-badge {
   min-width: 16px;
   height: 16px;
   background-color: #58181d;
-  color: #ffffff;
+  color: #fff;
   font-size: 10px;
   font-weight: 700;
   border-radius: 50%;
@@ -389,7 +389,7 @@ body.frescopa-theme main .confirmation .submit-wrapper button {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }
@@ -446,7 +446,7 @@ body.frescopa-theme main .form form .wizard .wizard-menu-item::before {
 body.frescopa-theme main .form form .wizard .wizard-menu-active-item::before {
   background: #27647d;
   border-color: #27647d;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Sign-in Block */
@@ -477,7 +477,7 @@ body.frescopa-theme main .create-account .frescopa-machine-field select {
   border-radius: 50px;
   font-size: 1rem;
   color: #999;
-  background: #ffffff;
+  background: #fff;
   box-sizing: border-box;
   appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
@@ -530,7 +530,7 @@ body.frescopa-theme main .loan-application-form-block form label {
 body.frescopa-theme main .form form fieldset.cards > .radio-wrapper > label,
 body.frescopa-theme main .form form fieldset.cards > .checkbox-wrapper > label {
   border-color: #ccc;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #58181d;
 }
 
@@ -562,7 +562,7 @@ body.frescopa-theme main .sign-in .create-account-link:hover {
     color: #fff !important;
 }
 body.frescopa-theme a:hover::after {
-    color: #ffffff !important;
+    color: #fff !important;
 }
 
 body.frescopa-theme main .order-summary .order-summary-title {
@@ -607,12 +607,12 @@ body.frescopa-theme a.button.secondary,
 body.frescopa-theme button.secondary {
     background: #dc6e52;
     border: 2px solid #dc6e52 !important;
-    color: #ffffff !important;
+    color: #fff !important;
 }
 body.frescopa-theme .cta-button-secondary a.button:hover,
 body.frescopa-theme .default-button-secondary a.button:hover {
     text-decoration: none;
-    background: #ffffff !important;
+    background: #fff !important;
     color: #dc6e52 !important;
     border-color: #dc6e52 !important;
 }
@@ -676,7 +676,7 @@ body.frescopa-theme main .product-detail .pd-btn-primary {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }
@@ -697,7 +697,7 @@ body.frescopa-theme main .product-detail .pd-btn-secondary {
 
 body.frescopa-theme main .product-detail .pd-btn-secondary:hover {
   background: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 body.frescopa-theme main .product-detail .pd-name,
@@ -732,7 +732,7 @@ body.frescopa-theme main .cart .cart-checkout-btn {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }
@@ -753,7 +753,7 @@ body.frescopa-theme main .cart .cart-empty-button {
 
 body.frescopa-theme main .cart .cart-empty-button:hover {
   background: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 /* ─── Checkout Block ─────────────────────────────────────────────────── */
@@ -782,7 +782,7 @@ body.frescopa-theme main .checkout .checkout-confirm-btn {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }
@@ -798,7 +798,7 @@ body.frescopa-theme main .order-summary .order-summary-btn-confirm {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }
@@ -819,7 +819,7 @@ body.frescopa-theme main .order-summary .order-summary-btn-back {
 
 body.frescopa-theme main .order-summary .order-summary-btn-back:hover {
   background: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 /* ─── Order Confirmation Block ───────────────────────────────────────── */
@@ -836,7 +836,7 @@ body.frescopa-theme main .order-confirmation .order-confirmation-btn {
   background: #27647d !important;
   background-color: #27647d !important;
   border-color: #27647d !important;
-  color: #ffffff !important;
+  color: #fff !important;
   font-family: roboto, roboto-fallback, sans-serif;
   border-radius: 999px;
 }

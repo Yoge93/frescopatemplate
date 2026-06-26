@@ -223,7 +223,8 @@
         "title",
         "video",
         "form",
-        "embed-adaptive-form"
+        "embed-adaptive-form",
+        "fragment-list"
       ]
     }
   ]
