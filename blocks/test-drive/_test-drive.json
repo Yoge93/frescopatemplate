@@ -114,10 +114,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "test-drive",
-      "components": []
-    }
-  ]
+  "filters": []
 }

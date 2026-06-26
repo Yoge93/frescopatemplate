@@ -67,10 +67,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "transfer-funds",
-      "components": []
-    }
-  ]
+  "filters": []
 }

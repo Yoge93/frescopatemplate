@@ -67,10 +67,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "set-up-auto-save",
-      "components": []
-    }
-  ]
+  "filters": []
 }

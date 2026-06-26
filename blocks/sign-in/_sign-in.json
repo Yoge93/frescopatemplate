@@ -90,10 +90,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "sign-in",
-      "components": []
-    }
-  ]
+  "filters": []
 }

@@ -67,10 +67,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "child-account-application",
-      "components": []
-    }
-  ]
+  "filters": []
 }
