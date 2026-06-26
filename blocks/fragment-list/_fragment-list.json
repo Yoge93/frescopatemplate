@@ -168,5 +168,10 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+     {
+      "id": "create-account",
+      "components": []
+    }
+  ]
 }
