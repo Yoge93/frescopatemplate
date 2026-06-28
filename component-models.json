@@ -7926,6 +7926,33 @@
         }
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "jsonPath",
+        "label": "JSON File Path / URL",
+        "description": "Path to a JSON file in the DAM (e.g. /content/dam/frescopa/data/doctors.json) or a full URL",
+        "condition": {
+          "or": [
+            {
+              "==": [
+                {
+                  "var": "dataSourceType"
+                },
+                "dam-json"
+              ]
+            },
+            {
+              "==": [
+                {
+                  "var": "dataSourceType"
+                },
+                "json"
+              ]
+            }
+          ]
+        }
+      },
+      {
         "component": "boolean",
         "name": "enableLocationSearch",
         "label": "Enable Location Search",

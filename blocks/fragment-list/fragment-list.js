@@ -310,14 +310,15 @@ function getCurrentLocation() {
 
 async function fetchDoctorData(config) {
   try {
-    const { dataSourceType, contentFragmentFolder, apiUrl } = config;
-    
+    const { dataSourceType, contentFragmentFolder, apiUrl, jsonPath } = config;
+
     console.log('=== FETCH DOCTOR DATA DEBUG ===');
     console.log('Data source type:', dataSourceType);
     console.log('Content Fragment folder:', contentFragmentFolder);
     console.log('API URL:', apiUrl);
+    console.log('JSON path:', jsonPath);
     console.log('Full config:', config);
-    
+
     switch (dataSourceType) {
       case 'content-fragments':
         if (contentFragmentFolder) {
@@ -327,7 +328,7 @@ async function fetchDoctorData(config) {
           console.warn('Content Fragment folder not provided, falling back to sample data');
         }
         break;
-        
+
       case 'api':
         if (apiUrl) {
           console.log('Attempting to fetch from API:', apiUrl);
@@ -336,7 +337,25 @@ async function fetchDoctorData(config) {
           console.warn('API URL not provided, falling back to empty array');
         }
         break;
-        
+
+      case 'dam-json':
+        if (jsonPath) {
+          console.log('Attempting to fetch from DAM JSON:', jsonPath);
+          return await fetchFromDAMJson(jsonPath);
+        } else {
+          console.warn('DAM JSON path not provided, falling back to empty array');
+        }
+        break;
+
+      case 'json':
+        if (jsonPath) {
+          console.log('Attempting to fetch from static JSON:', jsonPath);
+          return await fetchFromStaticJson(jsonPath);
+        } else {
+          console.warn('Static JSON path not provided, falling back to empty array');
+        }
+        break;
+
       default:
         console.warn('Unknown data source type:', dataSourceType, 'falling back to empty array');
         break;
@@ -582,13 +601,17 @@ function transformContentFragmentToDoctor(cfData) {
 }
 
 function getDataSourceInfo(config) {
-  const { dataSourceType, contentFragmentFolder, apiUrl } = config;
-  
+  const { dataSourceType, contentFragmentFolder, apiUrl, jsonPath } = config;
+
   switch (dataSourceType) {
     case 'content-fragments':
       return contentFragmentFolder ? `Content Fragment Folder (${contentFragmentFolder})` : 'Content Fragments (not configured)';
     case 'api':
       return apiUrl ? `External API (${apiUrl})` : 'External API (not configured)';
+    case 'dam-json':
+      return jsonPath ? `DAM JSON (${jsonPath})` : 'DAM JSON (not configured)';
+    case 'json':
+      return jsonPath ? `Static JSON (${jsonPath})` : 'Static JSON (not configured)';
     default:
       return 'Unknown data source';
   }
@@ -662,6 +685,7 @@ export default async function decorate(block) {
   let dataSourceType = 'content-fragments';
   let contentFragmentFolder = '';
   let apiUrl = '';
+  let jsonPath = '';
   let enableLocationSearch = true;
   let enableSpecialtyFilter = true;
   let enableProviderNameSearch = true;
@@ -694,6 +718,12 @@ export default async function decorate(block) {
               case 'contentfragmentfolder': contentFragmentFolder = value; break;
               case 'api url':
               case 'apiurl': apiUrl = value; break;
+              case 'json file path':
+              case 'json file path / url':
+              case 'json path':
+              case 'jsonpath':
+              case 'json url':
+              case 'jsonurl': jsonPath = value; break;
               case 'enable location search':
               case 'enablelocationsearch': enableLocationSearch = value !== 'false'; break;
               case 'enable specialty filter':
@@ -728,6 +758,7 @@ export default async function decorate(block) {
     dataSourceType,
     contentFragmentFolder,
     apiUrl,
+    jsonPath,
     enableLocationSearch,
     enableSpecialtyFilter,
     enableProviderNameSearch,
