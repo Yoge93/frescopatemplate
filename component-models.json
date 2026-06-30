@@ -1245,6 +1245,182 @@
     ]
   },
   {
+    "id": "fragment-list",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "Fragment List"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtitle",
+        "value": "Search "
+      },
+      {
+        "component": "select",
+        "name": "layout",
+        "label": "Layout Style",
+        "valueType": "string",
+        "value": "default",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Expanded",
+            "value": "expanded"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "dataSourceType",
+        "label": "Data Source Type",
+        "valueType": "string",
+        "value": "dam-json",
+        "options": [
+          {
+            "name": "JSON File from DAM",
+            "value": "dam-json"
+          },
+          {
+            "name": "Content Fragments",
+            "value": "content-fragments"
+          },
+          {
+            "name": "External API",
+            "value": "api"
+          },
+          {
+            "name": "Static JSON",
+            "value": "json"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "contentFragmentFolder",
+        "label": "Content Fragment Folder",
+        "description": "Select folder containing multiple doctor Content Fragments",
+        "valueType": "string",
+        "validation": {
+          "rootPath": "/content/dam"
+        },
+        "condition": {
+          "==": [
+            {
+              "var": "dataSourceType"
+            },
+            "content-fragments"
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "apiUrl",
+        "label": "API URL",
+        "description": "External API endpoint for doctor data",
+        "condition": {
+          "==": [
+            {
+              "var": "dataSourceType"
+            },
+            "api"
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jsonPath",
+        "label": "JSON File Path / URL",
+        "description": "Path to a JSON file in the DAM (e.g. /content/dam/frescopa/data/doctors.json) or a full URL",
+        "condition": {
+          "or": [
+            {
+              "==": [
+                {
+                  "var": "dataSourceType"
+                },
+                "dam-json"
+              ]
+            },
+            {
+              "==": [
+                {
+                  "var": "dataSourceType"
+                },
+                "json"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "name": "enableLocationSearch",
+        "label": "Enable Location Search",
+        "value": "true",
+        "valueType": "boolean"
+      },
+      {
+        "component": "boolean",
+        "name": "enableSpecialtyFilter",
+        "label": "Enable Specialty Filter",
+        "value": "true",
+        "valueType": "boolean"
+      },
+      {
+        "component": "boolean",
+        "name": "enableProviderNameSearch",
+        "label": "Enable Provider Name Search",
+        "value": "true",
+        "valueType": "boolean"
+      },
+      {
+        "component": "boolean",
+        "name": "enableSubmitAction",
+        "label": "Enable Submit Action",
+        "value": "true",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitUrl",
+        "label": "Submit URL",
+        "description": "URL to redirect to when Book Appointment is clicked (if Submit Action is enabled)",
+        "condition": {
+          "==": [
+            {
+              "var": "enableSubmitAction"
+            },
+            true
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "name": "custom-class",
+        "label": "Custom class",
+        "value": "",
+        "valueType": "string",
+        "description": "Space-separated class names to add to the block"
+      }
+    ]
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {
